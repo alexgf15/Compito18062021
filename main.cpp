@@ -144,10 +144,60 @@ ostream & operator<<(ostream & out, const Coda<U> & c)
 
 }
 
+void Creacoda(Coda<Rectangle> &R ,Coda<Triangle> &T,Coda<Circle> &C,int n )
+{
+    char scelta;
+    double base,altezza,raggio;
+    for(int i=0;i<n;i++)
+ {
+  cout<<"Shape N."<< i+1 <<endl;
+  cout<<" Per scegliere che tipo di forma creare,"<<endl;
+  cout<<" inserisci 'R'(Rettangolo),'T'(Triangolo) oppure 'C'(Cerchio): ";
+  cin>>scelta;
+}
 
+     Coda<Rectangle > CodaRectangle;
+    Coda<Circle> CodaCircle;
+    Coda<Triangle> CodaTriangle;
+
+  while(scelta!='R' && scelta!='T' && scelta!='C')
+  {
+   cout<<endl<<" Errore! Inserisci 'R'(Rettangolo),'T'(Triangolo) oppure 'C'(Cerchio): ";
+   cin>>scelta;
+  }
+
+ switch (scelta)
+ {
+
+
+               case 1: {
+                cout << "inserisci la base " << endl;
+                cin >> base;
+                cout << "inserisci l'altezza " << endl;
+                cin >> altezza  ;
+                CodaRectangle.inserisci(Rectangle(base,altezza));
+            }break;
+
+            case 2: {
+                cout << "Inserisci il raggio " << endl;
+                cin >> raggio;
+                CodaCircle.inserisci(Circle(raggio));
+            } break;
+            case 3: {
+                cout << "inserisci la base " << endl;
+                cin >> base;
+                cout << "inserisci l'altezza" << endl;
+                cin >> altezza;
+                CodaTriangle.inserisci(Triangle(base,altezza));
+            } break;
+
+
+        }
+}
 
 int main()
 {
+
 
 
 }
